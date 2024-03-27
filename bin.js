@@ -1,3 +1,4 @@
+#!/bin/env node
 import fs from "fs";
 import Path from "path";
 import cbjf from "./main.js";
