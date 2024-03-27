@@ -1,0 +1,41 @@
+{
+	"name": "cbjf",
+	"author": "Unbioctium <support@unbioctium.com> (https://unbioctium.com/)",
+	"license": "GPL-3.0",
+	"version": "0.0.1",
+	"homepage": "https://github.com/unbioctium/cbjf#readme",
+	"description": "Compressed Binary JSON File (CBJF) is a file format that encodes and compresses plain JSON data into binary form. <br /> This library contains pure JavaScript implementation of encoding and decoding CBJF files. <br />",
+	"bin": "bin.js",
+	"main": "main.js",
+	"type": "module",
+	"types": "./types/types.d.ts",
+	"files": [
+		"/out/",
+		"bin.js",
+		"main.js",
+		"package.json"
+	],
+	"keywords": [],
+	"engines": {
+		"node": ">=18.17.1",
+		"vscode": "^1.22.0"
+	},
+	"bugs": {
+		"url": "https://github.com/unbioctium/cbjf/issues",
+		"email": "support@unbioctium.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/unbioctium/cbjf.git"
+	},
+	"devDependencies": {
+		"@types/pako": "^2.0.3",
+		"typescript": "^5.4.3"
+	},
+	"dependencies": {
+		"pako": "^2.1.0"
+	},
+	"scripts": {
+		"build": "./scripts/build.sh"
+	}
+}
