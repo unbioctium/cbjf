@@ -2,6 +2,7 @@ import { deflate, inflate } from "pako";
 import UTF8 from "./UTF8.js";
 import ReadStream from "./ReadStream.js";
 import WriteStream from "./WriteStream.js";
+import CBJF from "../types/types.js";
 
 const enum DataID {
 	Void = 0,

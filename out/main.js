@@ -100,7 +100,7 @@ function encodeValue(str, v) {
                             str.write(view);
                             return;
                         }
-                        if (v <= 0xffff_ffff) {
+                        if (v <= 4294967295) {
                             const view = new DataView(new ArrayBuffer(5), 0, 5);
                             view.setUint8(0, 12 /* DataID.uint32 */);
                             view.setUint32(1, v, true);
@@ -123,7 +123,7 @@ function encodeValue(str, v) {
                             str.write(view);
                             return;
                         }
-                        if (v >= -0x8000_0000 && v < 0x8000_0000) {
+                        if (v >= -2147483648 && v < 2147483648) {
                             const view = new DataView(new ArrayBuffer(5), 0, 5);
                             view.setUint8(0, 22 /* DataID.int32 */);
                             view.setInt32(1, v, true);
@@ -171,7 +171,7 @@ function encodeValue(str, v) {
 export function encode(data, options) {
     if (typeof data !== "object" || data == null)
         throw new Error("Data must be a non-null object or array.");
-    if (typeof (options ||= {}) !== "object")
+    if (typeof (options || (options = {})) !== "object")
         throw new Error("The options parameter must be an object.");
     {
         const s = new WriteStream();

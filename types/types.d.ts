@@ -1,6 +1,8 @@
 /// <reference lib="es2015" />
 
-declare type nul = null | undefined | void;
+declare global {
+	export type nul = null | undefined | void;
+}
 
 declare module CBJF {
 	export const enum CompressMethod {
